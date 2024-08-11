@@ -1,0 +1,144 @@
+C:\Users\Asus\Documents\GitHub\mitAssignment2.2\venv\Scripts\python.exe C:\Users\Asus\Documents\GitHub\mitAssignment2.2\main.py 
+2024-08-11 18:59:00,557 - INFO - Use pytorch device_name: cpu
+2024-08-11 18:59:00,557 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-08-11 18:59:03,739 - INFO - Loading cached combined_index and embeddings
+Welcome to the Code Assistance Chat!
+You can ask questions about HTML, CSS, and JavaScript code.
+Type 'exit' to end the chat.
+
+Choose your input method (1 for voice, 2 for text): 1
+Please speak now...
+2024-08-11 18:59:21,066 - INFO - Sending request to LlamaAPI for query refinement: generate me an HTML CSS and JavaScript code for multiple choice quiz
+You said: generate me an HTML CSS and JavaScript code for multiple choice quiz
+Processing your query...
+2024-08-11 18:59:27,751 - INFO - Received refined query from LlamaAPI: <Response [200]>
+2024-08-11 18:59:27,751 - INFO - Performing vector search with refined query: Refined Query for Vector Search:
+
+"Create a multiple choice quiz template using HTML, CSS, and JavaScript. The quiz should have the following features:
+
+1. HTML structure:
+	* A container element to hold the quiz questions and answers
+	* A question element to display the current question
+	* A list of answer options (radio buttons or checkboxes)
+	* A submit button to submit the user's answer
+2. CSS styling:
+	* Basic styling for the quiz container, question, and answer options (e.g. font, color, padding)
+	* Optional: add animations or transitions for a more engaging user experience
+3. JavaScript functionality:
+	* Store the quiz questions and answers in a data structure (e.g. array of objects)
+	* Display the current question and answer options
+	* Handle user input (e.g. radio button or checkbox selection)
+	* Validate user answers and provide feedback (e.g. correct/incorrect, score tracking)
+	* Optional: add features like timer, progress bar, or question randomization
+
+Please provide the complete HTML, CSS, and JavaScript code for this multiple choice quiz template."
+
+This refined query is more specific and clear about the requirements for the quiz template, making it easier for a vector-based search to identify relevant code snippets or generate the necessary code. The query is also split into parts, focusing on the key concepts and features required for the quiz, which can aid in code extraction or creation.
+Batches: 100%|██████████| 1/1 [00:00<00:00,  3.54it/s]
+2024-08-11 18:59:28,035 - INFO - Querying vector store with query: Refined Query for Vector Search:
+
+"Create a multiple choice quiz template using HTML, CSS, and JavaScript. The quiz should have the following features:
+
+1. HTML structure:
+	* A container element to hold the quiz questions and answers
+	* A question element to display the current question
+	* A list of answer options (radio buttons or checkboxes)
+	* A submit button to submit the user's answer
+2. CSS styling:
+	* Basic styling for the quiz container, question, and answer options (e.g. font, color, padding)
+	* Optional: add animations or transitions for a more engaging user experience
+3. JavaScript functionality:
+	* Store the quiz questions and answers in a data structure (e.g. array of objects)
+	* Display the current question and answer options
+	* Handle user input (e.g. radio button or checkbox selection)
+	* Validate user answers and provide feedback (e.g. correct/incorrect, score tracking)
+	* Optional: add features like timer, progress bar, or question randomization
+
+Please provide the complete HTML, CSS, and JavaScript code for this multiple choice quiz template."
+
+This refined query is more specific and clear about the requirements for the quiz template, making it easier for a vector-based search to identify relevant code snippets or generate the necessary code. The query is also split into parts, focusing on the key concepts and features required for the quiz, which can aid in code extraction or creation.
+2024-08-11 18:59:28,043 - INFO - Received results from vector store: <__main__.VectorStoreQueryResult object at 0x000002CA4A981CD0>
+2024-08-11 18:59:28,043 - INFO - Top results: [{'content': '<p><strong>First steps</strong></p> <p><code>33</code></p> <p><strong>Chapter 6</strong></p> <p><strong>Using JavaScript: the big picture</strong></p> <h2>Contents</h2> <p><code>6.1 What are you learning in this book?.................. 35 6.2 The structure of browsers and Node.js................. 35 6.3 JavaScript references........................... 36 6.4 Further reading.............................. 36</code> <code>In this chapter, I’d like to paint the big picture: what are you learning in this book,', 'metadata': {'source': 'js3.md'}, 'score': 1.219071388244629}, {'content': 'plays: "checkers" }, . . . { name: "Pebbles", plays: "chess" }, ];</code></p> <p><code>The output would be something like the following (although it doesn’t matter if you don’t generate spaces and indentation). It would be easier if you could use, say, join(), but in this case, it won’t be allowed; only the three functions mentioned can be used:</code></p> <p>```</p> <div> <ul> <li>Barney</li> <li>Betty</li> . . . <li>Pebbles</li> </ul> </div> <p>; ```</p> <p><code>Questions 167</code></p> <p>5.2', 'metadata': {'source': 'js.md'}, 'score': 1.2174324989318848}, {'content': 'Node("E", null)))))); ``` ``` const newList = insertAfter(c3, "D", "B"); ``` ``` console.log(c3 === newList); // false ``` ``` console.log(c3!.key === newList!.key); // true (both are "G") ``` ``` console.log(c3!.next === newList!.next); // false ``` ``` console.log(c3!.next!.key === newList!.next!.key); // true (both are "B") ``` ``` console.log(c3!.next!.next === newList!.next!.next); // false ``` 560 Answers to Questions ``` console.log(c3!.next!.next!.key === "F"); // true ``` ```', 'metadata': {'source': 'js.md'}, 'score': 1.2052754163742065}, {'content': 'input[type="text"]:hover { background-color: #d0e2f0; border: 1px solid #999;} input[type="submit"] { border: 1px solid #006633; background-color: #009966; color: #FFFFFF; border-radius: 5px; padding: 5px; margin-top: 10px;} input[type="submit"]:hover { border: 1px solid #006633;** 353 LISTS, TABLES AND FORMS examPLe Lists , tabLes and Forms ``` background-color: #00CC33; color: #FFFFFF; cursor: pointer;} .title { float: left; width: 160px; clear: left;} .submit { width: 310px; text-align: right;} </style>', 'metadata': {'source': 'htmlcss.md'}, 'score': 1.2021502256393433}, {'content': 'What’s in this book?</h2> <p>ThisbookmakesJavaScriptlesschallengingtolearnfornewcomersbyofferingamodern view that is as consistent as possible.</p> <p><code>Highlights:</code> - Get started quickly by initially focusing on modern features. - Test-driven exercises and quizzes available for most chapters. - Covers all essential features of JavaScript, up to and including ES2022. - Optional advanced sections let you dig deeper.</p> <p><code>No prior knowledge of JavaScript is required, but you should know how', 'metadata': {'source': 'js3.md'}, 'score': 1.1968053579330444}, {'content': 'form as a whole can), but when responding to input with JavaScript, we often don’t want to submit our fields normally anyway. ``` <p><input type="text" value="abc"> (text)</p> <p><input type="password" value="abc"> (password)</p> <p><input type="checkbox" checked> (checkbox)</p> <p><input type="color" value="orange"> (color)</p> <p><input type="date" value="2023-10-13"> (date)</p> <p><input type="radio" value="A" name="choice"> <input type="radio" value="B" name="choice" checked> <input type="radio"', 'metadata': {'source': 'js2.md'}, 'score': 1.1361165046691895}, {'content': 'you to choose from a fixed set of answers (e.g. radio buttons, checkboxes or a drop down list), the web page author will add code that gives each option an automatic value. ``` **username=Ivy** ``` Name ``` ``` Value ``` 151 FORMS ``` R e s u lt ``` **<form>** ``` Form controls live inside a <form> element. This element should always carry the action attribute and will usually have a method and id attribute too. ``` ``` action Every <form> element requires an action attribute. Its value is the URL for the', 'metadata': {'source': 'htmlcss.md'}, 'score': 1.1332427263259888}, {'content': 'value="yes" />** Yes **</label> <label><input type="radio" name="member" value="no" />** No **</label></p> </fieldset> <div class="submit"><input type="submit" value="Register" /></div> </form> </body> </html>** sU mmary Lists , tabLes and Forms X (^) In addition to the CSS properties covered in other chapters which work with the contents of all elements, there are several others that are specifically used to control the appearance of lists, tables, and forms. X (^) List markers can be given different', 'metadata': {'source': 'htmlcss.md'}, 'score': 1.0830739736557007}, {'content': 'element. ``` ``` The cols attribute indicates how wide the text area should be (measured in numbers of characters). The rows attribute indicates how many rows the text area should take up vertically. ``` 155 FORMS ``` R e s u lt ``` **<input>** ``` type="radio" Radio buttons allow users to pick just one of a number of options. ``` ``` name The name attribute is sent to the server with the value of the option the user selects. When a question provides users with options for answers in the form of radio', 'metadata': {'source': 'htmlcss.md'}, 'score': 1.0646212100982666}, {'content': '<p><strong>10.1 Quizzes</strong></p> <p><code>Installation:</code> - Download and unzipimpatient-js-quiz.zip Running the quiz app: - Openimpatient-js-quiz/index.htmlin a web browser - You’ll see a TOC of all the quizzes.</p> <p><strong>10.2 Exercises</strong></p> <h2>10.2.1 Installing the exercises</h2> <p>To install the exercises:</p> <p><code>67</code></p> <p><code>68 10 Getting started with quizzes and exercises</code> - Download and unzipimpatient-js-code.zip - Follow the instructions inREADME.txt</p>', 'metadata': {'source': 'js3.md'}, 'score': 0.9581791758537292}]
+2024-08-11 18:59:28,048 - INFO - Sending request to LlamaAPI for result interpretation: generate me an HTML CSS and JavaScript code for multiple choice quiz
+2024-08-11 18:59:37,635 - INFO - Received interpretation from LlamaAPI: <Response [200]>
+
+Assistant: Based on the vector search results, I will provide a clear and concise answer to the original query "generate me an HTML CSS and JavaScript code for multiple choice quiz".
+
+**HTML Code:**
+```html
+<form>
+  <fieldset>
+    <legend>Multiple Choice Quiz</legend>
+    <label><input type="radio" name="question1" value="option1"> Option 1</label>
+    <label><input type="radio" name="question1" value="option2"> Option 2</label>
+    <label><input type="radio" name="question1" value="option3"> Option 3</label>
+  </fieldset>
+  <div class="submit"><input type="submit" value="Submit"></div>
+</form>
+```
+**CSS Code:**
+```css
+form {
+  width: 50%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+  padding: 10px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+```
+**JavaScript Code:**
+```javascript
+const form = document.querySelector('form');
+const submitButton = document.querySelector('input[type="submit"]');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const selectedOption = document.querySelector('input[type="radio"]:checked');
+  if (selectedOption) {
+    console.log(`You selected: ${selectedOption.value}`);
+  } else {
+    console.log('Please select an option');
+  }
+});
+```
+This code generates a basic multiple choice quiz with HTML, CSS, and JavaScript. The HTML code creates a form with a fieldset, legend, and radio buttons for the quiz options. The CSS code styles the form and its elements. The JavaScript code adds an event listener to the form's submit event, which checks if a radio button is selected and logs the selected value to the console. If no option is selected, it logs a message asking the user to select an option.
+Please speak now...

@@ -10,6 +10,7 @@ import asyncio
 from typing import List, Dict, Any
 import json
 from dotenv import load_dotenv
+import speech_recognition as sr
 
 # Load environment variables (you can keep this if you have other environment variables)
 load_dotenv()
@@ -245,6 +246,25 @@ def vector_search(vector_store, query: str, df: pd.DataFrame, top_k: int = 10) -
         logging.error(f"Error in vector_search: {e}")
         return []
 
+def recognize_speech():
+    recognizer = sr.Recognizer()
+    microphone = sr.Microphone()
+
+    with microphone as source:
+        print("Please speak now...")
+        recognizer.adjust_for_ambient_noise(source)
+        audio = recognizer.listen(source)
+
+    try:
+        text = recognizer.recognize_google(audio)
+        print(f"You said: {text}")
+        return text
+    except sr.UnknownValueError:
+        print("Sorry, I could not understand the audio.")
+        return None
+    except sr.RequestError as e:
+        print(f"Could not request results from Google Speech Recognition service; {e}")
+        return None
 async def handle_query(query: str):
     try:
         refine_request_json = {
@@ -318,13 +338,27 @@ async def handle_query(query: str):
 async def async_input(prompt: str) -> str:
     return await asyncio.to_thread(input, prompt)
 
+
 async def chat():
     print("Welcome to the Code Assistance Chat!")
     print("You can ask questions about HTML, CSS, and JavaScript code.")
     print("Type 'exit' to end the chat.")
 
+    # Ask user to choose input method
+    input_method = await async_input("\nChoose your input method (1 for voice, 2 for text): ")
+
     while True:
-        user_query = await async_input("\nYou: ")
+        if input_method == '1':
+            user_query = recognize_speech()
+            if user_query is None:
+                continue  # If speech recognition fails, continue to next iteration
+        elif input_method == '2':
+            user_query = await async_input("\nYou: ")
+        else:
+            print("Invalid choice, please select 1 for voice or 2 for text.")
+            input_method = await async_input("\nChoose your input method (1 for voice, 2 for text): ")
+            continue
+
         if user_query.lower() == 'exit':
             print("Thank you for using the Code Assistance Chat. Goodbye!")
             break
@@ -332,6 +366,7 @@ async def chat():
         print("Processing your query...")
         result = await handle_query(user_query)
         print(f"\nAssistant: {result}")
+
 
 if __name__ == "__main__":
     asyncio.run(chat())
