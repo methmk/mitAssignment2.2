@@ -1,4 +1,4 @@
-# MIT assignment 2.2 
+# MIT Assignment 2.2 - Speech-to-Text Tool for Speech Prompting
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -12,7 +12,6 @@
 - [Logging](#logging)
 - [Error Handling](#error-handling)
 
-
 ## Project Overview
 
 This project involves the conversion of four prominent books on web development and JavaScript programming into `.md` (Markdown) format. The books selected for this project are:
@@ -20,7 +19,7 @@ This project involves the conversion of four prominent books on web development 
 1. **HTML & CSS Design and Build Websites** by Jon Duckett
 2. **Mastering JavaScript Functional Programming** by Federico Kereki
 3. **Eloquent JavaScript** by Marijn Haverbeke
-4. **JavaScript for Impatient Programmer** by Dr. Axel Rauschmayer
+4. **JavaScript for Impatient Programmers** by Dr. Axel Rauschmayer
 
 The primary goal of this project is to convert these books into a format that maintains their structure while making the content more accessible for embedding and analysis, particularly in vector-based search systems.
 
@@ -42,7 +41,7 @@ The contents of the four books have been converted into the following Markdown f
 - `htmlcss.md` - Contains the content of "HTML & CSS Design and Build Websites."
 - `js.md` - Contains the content of "Mastering JavaScript Functional Programming."
 - `js2.md` - Contains the content of "Eloquent JavaScript."
-- `js3.md` - Contains the content of "JavaScript for Impatient Programmer."
+- `js3.md` - Contains the content of "JavaScript for Impatient Programmers."
 
 ### Code and Libraries
 
@@ -73,11 +72,24 @@ The project makes use of the following libraries and technologies:
 
 ## Usage
 
-To use this project, run the Python script. The user can interact with the system either through text or voice input. The system processes the query, refines it, searches the vector index, and provides a relevant answer based on the content of the four books.
+To use this project, follow these steps:
 
+1. **Install Requirements**: Ensure that all the required libraries and dependencies are installed. You can do this by running the following command in your terminal:
+
+   ```bash
+   pip install -r requirements.txt
+2. **Run main.py**: file. This can be done by running:
+   ```bash
+   go run main.go
+3. **Select Input Type**: Once the program is running, you will be prompted to choose your input method. You can select either:
+
+-   **Text Input**: Type your query directly into the terminal.
+-   **Voice Input**: Use your voice to input the query, utilizing the SpeechRecognition functionality.
+
+Follow the on-screen instructions to interact with the system and obtain the desired results.
 ## Environment Variables
 
-- **API Key**: The project uses the LlamaAPI, which requires an API key. This key is loaded from the environment using `dotenv`.
+-   **API Key**: The project uses the LlamaAPI, which requires an API key. This key is loaded from the environment using `dotenv`.
 
 ## Logging
 
@@ -86,8 +98,3 @@ The project includes logging to track the progress of operations and to handle e
 ## Error Handling
 
 The project has been designed to handle common errors, such as file not found errors and JSON parsing errors, ensuring robustness and reliability during execution.
-
-
-
-
-
